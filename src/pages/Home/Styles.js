@@ -1,19 +1,16 @@
 import styled from 'styled-components/native';
+import { colors } from '../../styles/styleVariables';
 
-export const Container = styled.View``;
-
-export const Header = styled.View`
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	height: 20%;
-	background-color: #ffe712;
+export const Container = styled.View`
 	flex: 1;
+	background-color: ${colors.black};
+	width: 100%;
 	justify-content: center;
 	align-items: center;
+	gap: 20px;
 `;
 
-export const Texto = styled.Text`
-	color: white;
+export const Title = styled.Text`
+	font-size: 30px;
+	color: ${colors.yellow};
 `;
