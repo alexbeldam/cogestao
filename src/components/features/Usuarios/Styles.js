@@ -35,7 +35,7 @@ export const Row = styled.View`
 
 export const Data = styled.Text`
 	color: ${colors.white};
-	width: ${100 / 3}%;
+	width: ${(props) => (props.solo ? 100 : 100 / 3)}%;
 	text-align: center;
 	font-size: 20px;
 `;

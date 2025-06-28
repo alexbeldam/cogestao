@@ -6,6 +6,7 @@ import Botao from '../../commons/Botao/Botao';
 
 export default function EditarDados({ id, nome, cargo }) {
 	const [open, setOpen] = useState(false);
+	const [novoCargo, setCargo] = useState(cargo);
 
 	function showModal() {
 		setOpen(true);
@@ -16,6 +17,8 @@ export default function EditarDados({ id, nome, cargo }) {
 	}
 
 	function handleCancel() {
+		setCargo(cargo);
+
 		setOpen(false);
 	}
 
@@ -31,7 +34,11 @@ export default function EditarDados({ id, nome, cargo }) {
 				onCancel={handleCancel}
 				footer={<Botao title="SALVAR" onPress={handleOk} />}
 			>
-				<Input placeholder="Novo Cargo" />
+				<Input
+					placeholder="Novo Cargo"
+					value={novoCargo}
+					onChangeText={setCargo}
+				/>
 			</Modal>
 		</View>
 	);

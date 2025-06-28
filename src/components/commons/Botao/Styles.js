@@ -3,7 +3,8 @@ import { colors } from '../../../styles/styleVariables';
 
 export const Button = styled.TouchableOpacity`
 	margin: 0 auto;
-	background-color: ${colors.orange};
+	background-color: ${(props) =>
+		props.yellow ? colors.yellow : colors.orange};
 	padding: 5px 10px;
 	border-radius: 10px;
 `;

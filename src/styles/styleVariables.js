@@ -5,4 +5,6 @@ export const colors = {
 	orange: '#F19709',
 	dim: 'rgba(0,0,0,0.7)',
 	gray: '#303030',
+	red: '#ed254e',
+	green: '#4caf50',
 };
