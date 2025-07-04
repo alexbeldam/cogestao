@@ -1,16 +1,14 @@
-import { Container } from './Styles';
-import { Pesquisa, Usuarios } from '../../components';
-import { useState } from 'react';
-import { Button } from 'react-native';
+import { Container } from "./Styles";
+import { Pesquisa, Usuarios } from "../../components";
+import { useState } from "react";
 
-export default function Home({ navigation }) {
-	const [busca, setBusca] = useState('');
+export default function Home() {
+  const [busca, setBusca] = useState("");
 
-	return (
-		<Container>
-			<Pesquisa busca={busca} setBusca={setBusca} />
-			<Usuarios busca={busca} />
-			{/*<Button title="Sair" onPress={() => navigation.replace('Logout')} />*/}
-		</Container>
-	);
+  return (
+    <Container>
+      <Pesquisa busca={busca} setBusca={setBusca} />
+      <Usuarios busca={busca} />
+    </Container>
+  );
 }
